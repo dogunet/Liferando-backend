@@ -47,6 +47,12 @@ const MenuSchema = new Schema({
     bonusPrice: {
         type: Number
     },
+    ingridients: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'PizzaParts'
+        }
+    ],
     sous: [
         {
             type: mongoose.Schema.Types.ObjectId,
